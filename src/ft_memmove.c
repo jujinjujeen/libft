@@ -6,14 +6,14 @@
 /*   By: ydidenko <ydidenko@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/07 14:21:14 by ydidenko      #+#    #+#                 */
-/*   Updated: 2023/10/10 17:31:06 by ydidenko      ########   odam.nl         */
+/*   Updated: 2023/10/10 18:15:20 by ydidenko      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "stddef.h"
 #include "stdio.h"
 
-void	*memmove(void *dest, const void *src, size_t n)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	char	*d_str;
 	char	*s_str;
@@ -48,6 +48,6 @@ void	*memmove(void *dest, const void *src, size_t n)
 // 	char	*src = whole;
 // 	char	*dest = whole + 3;
 
-// 	memmove((void *)dest, (void *)src, 5);
+// 	ft_memmove((void *)dest, (void *)src, 5);
 // 	printf("%s\n", whole);
 // }

@@ -6,11 +6,13 @@
 /*   By: ydidenko <ydidenko@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/06 13:33:50 by ydidenko      #+#    #+#                 */
-/*   Updated: 2023/10/10 17:46:03 by ydidenko      ########   odam.nl         */
+/*   Updated: 2023/10/10 17:49:38 by ydidenko      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
+#include "stddef.h"
+
+size_t	ft_strlcpy(char *dest, char *src, size_t size)
 {
 	int	count;
 
