@@ -6,11 +6,11 @@
 /*   By: ydidenko <ydidenko@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/06 13:36:25 by ydidenko      #+#    #+#                 */
-/*   Updated: 2023/10/06 13:36:44 by ydidenko      ########   odam.nl         */
+/*   Updated: 2023/10/07 14:33:17 by ydidenko      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_tolower(int c)
+char	ft_tolower(int c)
 {
 	if (c >= 65 && c <= 90)
 	{
