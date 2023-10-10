@@ -6,7 +6,26 @@
 /*   By: ydidenko <ydidenko@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/07 14:21:26 by ydidenko      #+#    #+#                 */
-/*   Updated: 2023/10/07 14:21:27 by ydidenko      ########   odam.nl         */
+/*   Updated: 2023/10/10 17:46:17 by ydidenko      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
+unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
+{
+	int	count;
+
+	count = 0;
+	while (count < size)
+	{
+		if (src[count] != '\0')
+		{
+			dest[count] = src[count];
+		}
+		else
+		{
+			dest[count] = '\0';
+		}
+		count++;
+	}
+	return (count);
+}
