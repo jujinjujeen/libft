@@ -6,11 +6,16 @@
 /*   By: ydidenko <ydidenko@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/07 14:20:38 by ydidenko      #+#    #+#                 */
-/*   Updated: 2023/10/10 18:15:03 by ydidenko      ########   odam.nl         */
+/*   Updated: 2023/10/17 19:22:23 by ydidenko      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "stddef.h"
+
+/*
+** The bzero() function writes n zeroed bytes to the string s.
+** If n is zero, bzero() does nothing.
+*/
 
 void	ft_bzero(void *s, size_t n)
 {
