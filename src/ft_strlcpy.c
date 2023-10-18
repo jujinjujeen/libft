@@ -6,7 +6,7 @@
 /*   By: ydidenko <ydidenko@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/06 13:33:50 by ydidenko      #+#    #+#                 */
-/*   Updated: 2023/10/17 19:34:28 by ydidenko      ########   odam.nl         */
+/*   Updated: 2023/10/18 11:18:48 by ydidenko      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@
 
 size_t	ft_strlcpy(char *dest, char *src, size_t size)
 {
-	int	count;
+	size_t	count;
 
 	count = 0;
 	while (count < size)

@@ -6,11 +6,11 @@
 /*   By: ydidenko <ydidenko@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/07 14:21:18 by ydidenko      #+#    #+#                 */
-/*   Updated: 2023/10/17 19:33:21 by ydidenko      ########   odam.nl         */
+/*   Updated: 2023/10/18 11:21:23 by ydidenko      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "stddef.h";
+#include "stddef.h"
 
 /*
 ** The memset() function writes len bytes of value c (converted to an unsigned

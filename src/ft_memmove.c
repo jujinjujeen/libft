@@ -6,7 +6,7 @@
 /*   By: ydidenko <ydidenko@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/07 14:21:14 by ydidenko      #+#    #+#                 */
-/*   Updated: 2023/10/17 19:32:32 by ydidenko      ########   odam.nl         */
+/*   Updated: 2023/10/18 11:19:47 by ydidenko      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	char	*d_str;
 	char	*s_str;
-	int		i;
+	size_t	i;
 
 	d_str = (char *)dest;
 	s_str = (char *)src;
