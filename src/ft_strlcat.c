@@ -6,7 +6,7 @@
 /*   By: ydidenko <ydidenko@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/07 14:21:26 by ydidenko      #+#    #+#                 */
-/*   Updated: 2023/10/18 11:17:34 by ydidenko      ########   odam.nl         */
+/*   Updated: 2023/10/18 11:25:31 by ydidenko      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,5 @@ size_t	ft_strlcat(char *dest, char *src, size_t size)
 		}
 		count++;
 	}
-
 	return (count);
 }

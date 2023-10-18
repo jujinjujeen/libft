@@ -6,7 +6,7 @@
 /*   By: ydidenko <ydidenko@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/07 14:21:10 by ydidenko      #+#    #+#                 */
-/*   Updated: 2023/10/17 19:30:45 by ydidenko      ########   odam.nl         */
+/*   Updated: 2023/10/18 11:24:47 by ydidenko      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,5 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 		d_str++;
 		n--;
 	}
-
 	return (dest);
 }

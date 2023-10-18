@@ -6,7 +6,7 @@
 /*   By: ydidenko <ydidenko@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/07 14:20:51 by ydidenko      #+#    #+#                 */
-/*   Updated: 2023/10/18 10:44:47 by ydidenko      ########   odam.nl         */
+/*   Updated: 2023/10/18 11:25:54 by ydidenko      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ void	*ft_calloc(size_t count, size_t size)
 	mem = malloc(count * size);
 	if (mem == NULL)
 		return (NULL);
-
 	p = (unsigned char *)mem;
 	i = 0;
 	while (i < (count * size))

@@ -6,7 +6,7 @@
 /*   By: ydidenko <ydidenko@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/07 14:21:22 by ydidenko      #+#    #+#                 */
-/*   Updated: 2023/10/18 11:21:06 by ydidenko      ########   odam.nl         */
+/*   Updated: 2023/10/18 11:26:07 by ydidenko      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ char	*ft_strdup(const char *s1)
 	dup = malloc((len + 1) * sizeof(char));
 	if (dup == NULL)
 		return (NULL);
-
 	ft_strlcpy(dup, (char *)s1, len);
 	return (dup);
 }
