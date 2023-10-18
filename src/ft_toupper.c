@@ -6,7 +6,7 @@
 /*   By: ydidenko <ydidenko@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/07 14:21:43 by ydidenko      #+#    #+#                 */
-/*   Updated: 2023/10/17 19:38:27 by ydidenko      ########   odam.nl         */
+/*   Updated: 2023/10/18 12:13:30 by ydidenko      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,10 @@
 ** or the value of EOF.
 */
 
-char	ft_toupper(int c)
+int	ft_toupper(int c)
 {
 	if (c >= 97 && c <= 122)
-		return (c = c - 32);
+		return (c - 32);
 	else
 		return (c);
 }
