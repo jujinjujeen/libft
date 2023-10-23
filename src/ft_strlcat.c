@@ -6,11 +6,12 @@
 /*   By: ydidenko <ydidenko@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/07 14:21:26 by ydidenko      #+#    #+#                 */
-/*   Updated: 2023/10/18 11:25:31 by ydidenko      ########   odam.nl         */
+/*   Updated: 2023/10/23 19:30:05 by ydidenko      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "stddef.h"
+#include "../libft.h"
 
 /*
 ** The strlcat() function appends the NUL-terminated string src to the end of
@@ -21,19 +22,19 @@
 size_t	ft_strlcat(char *dest, char *src, size_t size)
 {
 	size_t	count;
+	size_t	dest_len;
+	size_t	src_len;
 
 	count = 0;
-	while (count < size)
+	dest_len = ft_strlen(dest);
+	src_len = ft_strlen(src);
+	if (size == 0 || size <= dest_len)
+		return (size + src_len);
+	while (count < (size - dest_len - 1) && src[count])
 	{
-		if (src[count] != '\0')
-		{
-			dest[count] = src[count];
-		}
-		else
-		{
-			dest[count] = '\0';
-		}
+		dest[dest_len + count] = src[count];
 		count++;
 	}
-	return (count);
+	dest[dest_len + count] = '\0';
+	return (dest_len + src_len);
 }
