@@ -6,7 +6,7 @@
 /*   By: ydidenko <ydidenko@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/07 14:21:14 by ydidenko      #+#    #+#                 */
-/*   Updated: 2023/10/18 11:25:10 by ydidenko      ########   odam.nl         */
+/*   Updated: 2023/10/23 18:57:20 by ydidenko      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	char	*d_str;
 	char	*s_str;
-	size_t	i;
+	int		i;
 
 	d_str = (char *)dest;
 	s_str = (char *)src;
@@ -41,7 +41,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	else
 	{
 		i = 0;
-		while (i < n)
+		while (i < (int)n)
 		{
 			d_str[i] = s_str[i];
 			i++;

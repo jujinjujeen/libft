@@ -1,5 +1,7 @@
 *.o
 *.a
 a.out
-
+.vscode
 obj
+test
+test.c

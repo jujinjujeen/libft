@@ -6,7 +6,7 @@
 #    By: ydidenko <ydidenko@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2023/10/17 20:08:38 by ydidenko      #+#    #+#                  #
-#    Updated: 2023/10/18 14:50:14 by ydidenko      ########   odam.nl          #
+#    Updated: 2023/10/23 18:31:38 by ydidenko      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,3 +47,6 @@ fclean:			clean
 				$(RM) $(NAME)
 
 re:				fclean $(NAME)
+
+test: $(NAME) test.c
+	$(CC) $(CFLAGS) -o test test.c -L. -lft -g
