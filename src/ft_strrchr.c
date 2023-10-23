@@ -6,7 +6,7 @@
 /*   By: ydidenko <ydidenko@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/17 19:06:09 by ydidenko      #+#    #+#                 */
-/*   Updated: 2023/10/17 21:05:25 by ydidenko      ########   odam.nl         */
+/*   Updated: 2023/10/23 20:23:22 by ydidenko      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,14 +25,15 @@ char	*ft_strrchr(const char *s, int c)
 	char	*found;
 	char	*str;
 
+	found = NULL;
 	str = (char *)s;
 	while (*str)
 	{
-		if (*str == c)
+		if (*str == (char)c)
 			found = str;
 		str++;
 	}
-	if (!*str && *str == c)
+	if (*str == (char)c)
 		return (str);
 	return (found);
 }
