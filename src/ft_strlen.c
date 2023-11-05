@@ -6,7 +6,7 @@
 /*   By: ydidenko <ydidenko@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/06 13:32:13 by ydidenko      #+#    #+#                 */
-/*   Updated: 2023/10/23 19:07:48 by ydidenko      ########   odam.nl         */
+/*   Updated: 2023/11/05 18:29:01 by ydidenko      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 ** excluding the terminating null byte ('\0').
 */
 
-size_t	ft_strlen(char *str)
+size_t	ft_strlen(const char *str)
 {
 	size_t	i;
 

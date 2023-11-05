@@ -6,7 +6,7 @@
 /*   By: ydidenko <ydidenko@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/06 13:33:50 by ydidenko      #+#    #+#                 */
-/*   Updated: 2023/10/23 19:15:17 by ydidenko      ########   odam.nl         */
+/*   Updated: 2023/11/05 20:46:53 by ydidenko      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,14 +20,13 @@
 ** the length of src
 */
 
-size_t	ft_strlcpy(char *dest, char *src, size_t size)
+size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
 	size_t	count;
 	size_t	src_len;
 
 	count = 0;
 	src_len = ft_strlen(src);
-
 	if (size == 0)
 		return (src_len);
 	while ((count < (size - 1)) && src[count] != '\0')

@@ -6,7 +6,7 @@
 /*   By: ydidenko <ydidenko@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/07 14:21:26 by ydidenko      #+#    #+#                 */
-/*   Updated: 2023/10/23 19:30:05 by ydidenko      ########   odam.nl         */
+/*   Updated: 2023/11/05 18:29:49 by ydidenko      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 ** the result.
 */
 
-size_t	ft_strlcat(char *dest, char *src, size_t size)
+size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
 	size_t	count;
 	size_t	dest_len;

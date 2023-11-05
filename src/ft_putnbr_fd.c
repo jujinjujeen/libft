@@ -1,32 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_strdup.c                                        :+:    :+:            */
+/*   ft_putnbr_fd.c                                     :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: ydidenko <ydidenko@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2023/10/07 14:21:22 by ydidenko      #+#    #+#                 */
-/*   Updated: 2023/11/05 18:28:10 by ydidenko      ########   odam.nl         */
+/*   Created: 2023/11/05 20:53:06 by ydidenko      #+#    #+#                 */
+/*   Updated: 2023/11/05 20:53:28 by ydidenko      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stddef.h>
-#include "../libft.h"
-/*
-** The strdup() function allocates sufficient memory for a copy of
-** the string s1, does the copy, and returns a pointer to it.
+#include "unistd.h"
+
+/**
+ * Outputs the integer ’n’ to the given file
+ * descriptor.
 */
-
-char	*ft_strdup(const char *s1)
+void	ft_putnbr_fd(int n, int fd)
 {
-	size_t	len;
-	char	*dup;
+	long int	nbr;
 
-	len = ft_strlen(s1);
-	dup = malloc((len + 1) * sizeof(char));
-	if (dup == NULL)
-		return (NULL);
-	ft_strlcpy(dup, (char *)s1, len + 1);
-	return (dup);
+	nbr = n;
+	if (nbr < 0)
+	{
+		write(fd, "-", 1);
+		nbr = nbr * (-1);
+	}
+	if (nbr >= 10)
+	{
+		ft_putnbr_fd(nbr / 10, fd);
+	}
+	nbr = nbr % 10 + 48;
+	write(fd, &nbr, 1);
 }

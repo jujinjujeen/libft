@@ -1,32 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_strdup.c                                        :+:    :+:            */
+/*   ft_putstr_fd.c                                     :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: ydidenko <ydidenko@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2023/10/07 14:21:22 by ydidenko      #+#    #+#                 */
-/*   Updated: 2023/11/05 18:28:10 by ydidenko      ########   odam.nl         */
+/*   Created: 2023/11/05 20:48:47 by ydidenko      #+#    #+#                 */
+/*   Updated: 2023/11/05 20:49:14 by ydidenko      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stddef.h>
-#include "../libft.h"
-/*
-** The strdup() function allocates sufficient memory for a copy of
-** the string s1, does the copy, and returns a pointer to it.
+#include "unistd.h"
+
+/**
+ * Outputs the string ’s’ to the given file
+ * descriptor.
 */
-
-char	*ft_strdup(const char *s1)
+void	ft_putstr_fd(char *s, int fd)
 {
-	size_t	len;
-	char	*dup;
+	int	i;
 
-	len = ft_strlen(s1);
-	dup = malloc((len + 1) * sizeof(char));
-	if (dup == NULL)
-		return (NULL);
-	ft_strlcpy(dup, (char *)s1, len + 1);
-	return (dup);
+	i = 0;
+	if (s != 0)
+	{
+		while (s[i])
+		{
+			write(fd, &s[i], 1);
+			i++;
+		}
+	}
 }

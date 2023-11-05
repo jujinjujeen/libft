@@ -1,32 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_strdup.c                                        :+:    :+:            */
+/*   ft_striteri.c                                      :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: ydidenko <ydidenko@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2023/10/07 14:21:22 by ydidenko      #+#    #+#                 */
-/*   Updated: 2023/11/05 18:28:10 by ydidenko      ########   odam.nl         */
+/*   Created: 2023/11/05 20:41:16 by ydidenko      #+#    #+#                 */
+/*   Updated: 2023/11/05 20:42:04 by ydidenko      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stddef.h>
 #include "../libft.h"
-/*
-** The strdup() function allocates sufficient memory for a copy of
-** the string s1, does the copy, and returns a pointer to it.
+#include <stdlib.h>
+/**
+ * Applies the function ’f’ on each character of
+ * the string passed as argument, passing its index
+ * as first argument. Each character is passed by
+ * address to ’f’ to be modified if necessary.
 */
-
-char	*ft_strdup(const char *s1)
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	size_t	len;
-	char	*dup;
+	int	i;
 
-	len = ft_strlen(s1);
-	dup = malloc((len + 1) * sizeof(char));
-	if (dup == NULL)
-		return (NULL);
-	ft_strlcpy(dup, (char *)s1, len + 1);
-	return (dup);
+	i = 0;
+	while (s[i])
+	{
+		f(i, &s[i]);
+		i++;
+	}
 }
