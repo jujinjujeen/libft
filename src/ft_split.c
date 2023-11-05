@@ -6,14 +6,14 @@
 /*   By: ydidenko <ydidenko@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/11/05 18:44:30 by ydidenko      #+#    #+#                 */
-/*   Updated: 2023/11/05 20:59:57 by ydidenko      ########   odam.nl         */
+/*   Updated: 2023/11/05 21:12:34 by ydidenko      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 #include <stdlib.h>
 
-size_t	get_words_count(char const *s, char c)
+static size_t	get_words_count(char const *s, char c)
 {
 	size_t	count;
 	int		i;
@@ -35,7 +35,7 @@ size_t	get_words_count(char const *s, char c)
 	return (count);
 }
 
-void	free_arr(char **str_arr, int last_i)
+static void	free_arr(char **str_arr, int last_i)
 {
 	int	i;
 
@@ -45,7 +45,7 @@ void	free_arr(char **str_arr, int last_i)
 	free(str_arr);
 }
 
-char	*create_chunk(char *s, char c, int *pos)
+static char	*create_chunk(char *s, char c, int *pos)
 {
 	char	*chunk;
 	int		i;

@@ -6,14 +6,14 @@
 /*   By: ydidenko <ydidenko@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/11/05 20:22:31 by ydidenko      #+#    #+#                 */
-/*   Updated: 2023/11/05 20:47:01 by ydidenko      ########   odam.nl         */
+/*   Updated: 2023/11/05 21:11:39 by ydidenko      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 #include <stdlib.h>
 
-unsigned int	get_size(int number)
+static unsigned int	get_size(int number)
 {
 	unsigned int	length;
 

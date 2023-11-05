@@ -6,7 +6,7 @@
 /*   By: ydidenko <ydidenko@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/06 13:36:06 by ydidenko      #+#    #+#                 */
-/*   Updated: 2023/10/23 20:16:39 by ydidenko      ########   odam.nl         */
+/*   Updated: 2023/11/05 21:11:14 by ydidenko      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 ** pointed to by str to int representation.
 */
 
-int	handle_overflow(int sign)
+static int	handle_overflow(int sign)
 {
 	if (sign == 1)
 		return (INT_MAX);

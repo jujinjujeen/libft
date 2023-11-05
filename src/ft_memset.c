@@ -6,7 +6,7 @@
 /*   By: ydidenko <ydidenko@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/07 14:21:18 by ydidenko      #+#    #+#                 */
-/*   Updated: 2023/10/18 11:21:23 by ydidenko      ########   odam.nl         */
+/*   Updated: 2023/11/05 21:12:00 by ydidenko      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 ** The memset() function writes len bytes of value c (converted to an unsigned
 ** char) to the string b.
 */
-
 void	*ft_memset(void *s, int c, size_t n)
 {
 	char	*str;

@@ -6,7 +6,7 @@
 /*   By: ydidenko <ydidenko@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/23 20:40:01 by ydidenko      #+#    #+#                 */
-/*   Updated: 2023/11/05 18:29:20 by ydidenko      ########   odam.nl         */
+/*   Updated: 2023/11/05 21:13:34 by ydidenko      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@
 ** The substring begins at index ’start’ and is of
 ** maximum size ’len’.
 */
-
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	max_len;
