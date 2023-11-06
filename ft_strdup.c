@@ -6,13 +6,13 @@
 /*   By: ydidenko <ydidenko@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/07 14:21:22 by ydidenko      #+#    #+#                 */
-/*   Updated: 2023/11/05 18:28:10 by ydidenko      ########   odam.nl         */
+/*   Updated: 2023/11/06 14:40:16 by ydidenko      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <stddef.h>
-#include "../libft.h"
+#include "./libft.h"
 /*
 ** The strdup() function allocates sufficient memory for a copy of
 ** the string s1, does the copy, and returns a pointer to it.

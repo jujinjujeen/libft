@@ -6,12 +6,12 @@
 /*   By: ydidenko <ydidenko@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/06 13:33:50 by ydidenko      #+#    #+#                 */
-/*   Updated: 2023/11/05 20:46:53 by ydidenko      ########   odam.nl         */
+/*   Updated: 2023/11/06 14:40:16 by ydidenko      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "stddef.h"
-#include "../libft.h"
+#include "./libft.h"
 /*
 ** The strlcpy() function copies up to size - 1 characters from the
 ** NUL-terminated string src to dst, NUL-terminating the result.

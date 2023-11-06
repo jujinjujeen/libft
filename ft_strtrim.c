@@ -6,11 +6,11 @@
 /*   By: ydidenko <ydidenko@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/11/05 18:13:35 by ydidenko      #+#    #+#                 */
-/*   Updated: 2023/11/05 20:43:13 by ydidenko      ########   odam.nl         */
+/*   Updated: 2023/11/06 14:40:16 by ydidenko      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "./libft.h"
 #include <stdlib.h>
 
 /**

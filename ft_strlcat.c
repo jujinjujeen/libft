@@ -6,12 +6,12 @@
 /*   By: ydidenko <ydidenko@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/07 14:21:26 by ydidenko      #+#    #+#                 */
-/*   Updated: 2023/11/05 18:29:49 by ydidenko      ########   odam.nl         */
+/*   Updated: 2023/11/06 15:28:17 by ydidenko      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "stddef.h"
-#include "../libft.h"
+#include "./libft.h"
 
 /*
 ** The strlcat() function appends the NUL-terminated string src to the end of
