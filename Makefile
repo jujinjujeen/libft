@@ -6,13 +6,13 @@
 #    By: ydidenko <ydidenko@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2023/10/17 20:08:38 by ydidenko      #+#    #+#                  #
-#    Updated: 2023/11/06 14:39:37 by ydidenko      ########   odam.nl          #
+#    Updated: 2023/11/07 16:45:56 by ydidenko      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
-OBJDIR = obj
+NAME 			=	libft.a
 
-NAME = libft.a
+OBJDIR 			=	obj
 
 SRCS			=	ft_isalnum.c ft_isprint.c ft_memcmp.c \
 					ft_strlcat.c ft_strncmp.c ft_atoi.c ft_isalpha.c \
@@ -24,11 +24,15 @@ SRCS			=	ft_isalnum.c ft_isprint.c ft_memcmp.c \
 					ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c \
 					ft_split.c
 
-OBJS = $(addprefix $(OBJDIR)/, $(notdir $(SRCS:.c=.o)))
+BONS			=	ft_lstnew_bonus.c
 
-CC				= cc
-RM				= rm -f
-CFLAGS			= -Wall -Wextra -Werror -I.
+OBJS 			=	$(addprefix $(OBJDIR)/, $(SRCS:.c=.o))
+
+B_OBJS 			=	$(addprefix $(OBJDIR)/, $(BONS:.c=.o))
+
+CC				=	cc
+RM				=	rm -f
+CFLAGS			=	-Wall -Wextra -Werror -I.
 
 all:			$(NAME)
 
@@ -41,13 +45,18 @@ $(OBJDIR)/%.o:	%.c | $(OBJDIR)
 $(OBJDIR):
 				mkdir -p $(OBJDIR)
 
+bonus: 			$(B_OBJS) $(OBJS) $(OBJDIR)
+				ar rcs $(NAME) $(OBJS) $(B_OBJS)
+
 clean:
-				$(RM) $(OBJS)
+				$(RM) $(OBJS) $(B_OBJS)
 
 fclean:			clean
 				$(RM) $(NAME)
 
 re:				fclean $(NAME)
 
-test: $(NAME) test.c
-	$(CC) $(CFLAGS) -o test test.c -L. -lft -g
+test:			$(NAME) test.c
+				$(CC) $(CFLAGS) -o test test.c -L. -lft -g
+
+.PHONY:			clean fclean re all

@@ -6,7 +6,7 @@
 /*   By: ydidenko <ydidenko@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/07 14:21:01 by ydidenko      #+#    #+#                 */
-/*   Updated: 2023/10/18 10:44:51 by ydidenko      ########   odam.nl         */
+/*   Updated: 2023/11/10 20:15:35 by ydidenko      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	p = (char *)s;
 	while (n != 0)
 	{
-		if (c == *p)
+		if ((char)c == *p)
 		{
 			found = (void *)p;
 			return (found);

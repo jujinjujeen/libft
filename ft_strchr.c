@@ -6,7 +6,7 @@
 /*   By: ydidenko <ydidenko@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/07 14:21:38 by ydidenko      #+#    #+#                 */
-/*   Updated: 2023/10/17 21:05:18 by ydidenko      ########   odam.nl         */
+/*   Updated: 2023/11/10 20:15:16 by ydidenko      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,25 +19,18 @@
 ** The terminating null character is considered to be part of the string;
 ** therefore if c is `\0', the functions locate the terminating `\0'.
 */
-
 char	*ft_strchr(const char *s, int c)
 {
 	char	*found;
 
 	found = (char *)s;
-	while (*found)
+	while (*found != '\0')
 	{
-		if (*found == c)
-			break ;
+		if (*found == (char)c)
+			return (found);
 		found++;
 	}
-	if (*found == c)
+	if (*found == (char)c)
 		return (found);
 	return (NULL);
 }
-
-// int	main(void)
-// {
-// 	printf("%s\n", ft_strchr("Hello", '\0'));
-// 	return (0);
-// }
