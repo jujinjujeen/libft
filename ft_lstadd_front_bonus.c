@@ -1,24 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_isprint.c                                       :+:    :+:            */
+/*   ft_lstadd_front_bonus.c                            :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: ydidenko <ydidenko@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2023/10/06 13:30:07 by ydidenko      #+#    #+#                 */
-/*   Updated: 2023/11/10 22:11:00 by ydidenko      ########   odam.nl         */
+/*   Created: 2023/11/10 22:17:05 by ydidenko      #+#    #+#                 */
+/*   Updated: 2023/11/10 22:19:38 by ydidenko      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-** The isprint() function tests for any printing character, including space
-** (` ').  The value of the argument must be representable as an unsigned char
-** or the value of EOF.
-*/
-int	ft_isprint(int c)
+#include "./libft.h"
+
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	if (c >= 32 && c <= 126)
-		return (1);
-	else
-		return (0);
+	if (lst && new)
+	{
+		if (*lst == NULL)
+			*lst = new;
+		else
+		{
+			new->next = *lst;
+			*lst = new;
+		}
+	}
 }

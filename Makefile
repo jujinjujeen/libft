@@ -6,13 +6,11 @@
 #    By: ydidenko <ydidenko@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2023/10/17 20:08:38 by ydidenko      #+#    #+#                  #
-#    Updated: 2023/11/07 16:45:56 by ydidenko      ########   odam.nl          #
+#    Updated: 2023/11/10 22:27:39 by ydidenko      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
 NAME 			=	libft.a
-
-OBJDIR 			=	obj
 
 SRCS			=	ft_isalnum.c ft_isprint.c ft_memcmp.c \
 					ft_strlcat.c ft_strncmp.c ft_atoi.c ft_isalpha.c \
@@ -24,11 +22,12 @@ SRCS			=	ft_isalnum.c ft_isprint.c ft_memcmp.c \
 					ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c \
 					ft_split.c
 
-BONS			=	ft_lstnew_bonus.c
+BONS			=	ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstlast_bonus.c \
+					ft_lstsize_bonus.c
 
-OBJS 			=	$(addprefix $(OBJDIR)/, $(SRCS:.c=.o))
+OBJS 			=	$(SRCS:.c=.o)
 
-B_OBJS 			=	$(addprefix $(OBJDIR)/, $(BONS:.c=.o))
+B_OBJS 			=	$(BONS:.c=.o)
 
 CC				=	cc
 RM				=	rm -f
@@ -39,13 +38,10 @@ all:			$(NAME)
 $(NAME):		$(OBJS)
 				ar rcs $(NAME) $(OBJS)
 
-$(OBJDIR)/%.o:	%.c | $(OBJDIR)
+%.o:			%.c
 				$(CC) $(CFLAGS) -c $< -o $@
 
-$(OBJDIR):
-				mkdir -p $(OBJDIR)
-
-bonus: 			$(B_OBJS) $(OBJS) $(OBJDIR)
+bonus: 			$(B_OBJS) $(OBJS)
 				ar rcs $(NAME) $(OBJS) $(B_OBJS)
 
 clean:
